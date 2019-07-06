@@ -6,7 +6,7 @@ import config
 #DEFINIZIONE COMANDI ADMIN
 from functools import wraps
 
-LIST_OF_ADMINS = [605363037,204641236,650789883,70720440,481465978,172042287]
+LIST_OF_ADMINS = [123456789]
 
 def restricted(func):
     @wraps(func)
