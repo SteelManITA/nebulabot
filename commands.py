@@ -6,7 +6,7 @@ import config
 #DEFINIZIONE COMANDI ADMIN
 from functools import wraps
 
-LIST_OF_ADMINS = [123456789]
+LIST_OF_ADMINS = [605363037,204641236,650789883,70720440,481465978,172042287]
 
 def restricted(func):
     @wraps(func)
@@ -75,7 +75,7 @@ def source(bot, update):
                                           "<b>Linguaggio:</b> <em>Python</em>\n\n"
                                           "<b>Versione</b>:<em> v.2.7 - Balena</em>\n\n"
                                           "<b>Developer</b>:<em>Hersel Giannella</em>\n\n"
-                                            "<b>Sorgente</b>:<a href=\"https://github.com/hersel91/Zampa2\"> GitHub</a>\n\n"
+                                            "<b>Sorgente</b>:<a href=\"https://github.com/hersel91/nebulabot\"> GitHub</a>\n\n"
                                           "<b>Sito Web</b>:  <a href=\"https://hersel.it\">hersel.it</a> ", parse_mode = 'HTML')
 #FUNZIONE MUTA
 @restricted
@@ -103,4 +103,5 @@ def smuta(bot, update):
     bot.send_message(config.channel_id,
 		text="UTENTE SMUTATO\nUSERNAME: {username}\nID: {id}\nGRUPPO: {chat_title}"
 			.format(username="@"+update.message.reply_to_message.from_user.username,id=update.message.reply_to_message.from_user.id,chat_title=update.message.chat.title)
-			, parse_mode='HTML')    
+			, parse_mode='HTML')  
+
