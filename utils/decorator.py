@@ -2,7 +2,7 @@
 from functools import wraps
 
 
-LIST_OF_ADMINS = [605363037,53451006,77582926,442991919]
+LIST_OF_ADMINS = [123456789,123456789]
 
 def restricted(func):
     @wraps(func)
