@@ -48,7 +48,7 @@
 <b>=============================</b>
 <code>Release info:
 
-v.3.3 - Castoro
+v.3.5 - Castoro
 Source code: /source
 
 Dev:</code> @Hersy

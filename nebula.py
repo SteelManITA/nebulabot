@@ -30,6 +30,9 @@ def main():
     dp.add_handler(CommandHandler("say", commands.say.init))
     dp.add_handler(CommandHandler("annuncio", commands.annuncio.init))
     dp.add_handler(CommandHandler("richiedi", commands.richiedifunzione.init))
+    dp.add_handler(CommandHandler("exit", commands.leave.init))
+    dp.add_handler(CommandHandler("title", commands.chattitle.init))
+    dp.add_handler(CommandHandler("description", commands.chatdescription.init))
     
     # Qui richiamo le funzioni senza comando, =>handler
     dp.add_handler(MessageHandler(None, dialogs.handler.init))
