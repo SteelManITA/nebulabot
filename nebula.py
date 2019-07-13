@@ -33,6 +33,7 @@ def main():
     dp.add_handler(CommandHandler("exit", commands.leave.init))
     dp.add_handler(CommandHandler("title", commands.chattitle.init))
     dp.add_handler(CommandHandler("description", commands.chatdescription.init))
+    dp.add_handler(CommandHandler("setbattuta", commands.insertbattuta.init))
     
     # Qui richiamo le funzioni senza comando, =>handler
     dp.add_handler(MessageHandler(None, dialogs.handler.init))

@@ -44,11 +44,13 @@
 - /muta [muta un utente, solo admin]
 - /smuta [smuta un utente, solo admin]
 - /fissa [solo admin]
+- /description [solo admin]
+- /title [solo admin]
 
 <b>=============================</b>
 <code>Release info:
 
-v.3.5 - Castoro
+v.4.0 - Delfino
 Source code: /source
 
 Dev:</code> @Hersy
