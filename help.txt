@@ -46,11 +46,13 @@
 - /fissa [solo admin]
 - /description [solo admin]
 - /title [solo admin]
+- /setbattuta [solo admin]
+- /setrisposta [solo admin]
 
 <b>=============================</b>
 <code>Release info:
 
-v.4.0 - Delfino
+v.4.2 - Delfino
 Source code: /source
 
 Dev:</code> @Hersy
