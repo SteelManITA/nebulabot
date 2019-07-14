@@ -7,6 +7,7 @@ from . import definisci
 from . import welcome
 from . import battuta
 from . import admincommand
+from . import customhandler
 
 #RISPOSTE DI NEBULA
 
@@ -108,6 +109,7 @@ def init(bot, update):
 	kali(bot, update)
 	definisci.init(bot, update)
 	admincommand.init(bot, update)
+	customhandler.init(bot, update)
 	
 
 
