@@ -35,6 +35,7 @@ def main():
     dp.add_handler(CommandHandler("description", commands.chatdescription.init))
     dp.add_handler(CommandHandler("setbattuta", commands.insertbattuta.init))
     dp.add_handler(CommandHandler("setrisposta", commands.insertcustomhandler.init))
+    dp.add_handler(CommandHandler("server", commands.server.init))
     
     # Qui richiamo le funzioni senza comando, =>handler
     dp.add_handler(MessageHandler(None, dialogs.handler.init))
