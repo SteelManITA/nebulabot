@@ -1,5 +1,6 @@
 import config
 import MySQLdb
+import unicodedata
 from utils import decorator
 
 @decorator.restricted
@@ -14,6 +15,7 @@ def init(bot, update):
             db=MySQLdb.connect(config.database['server'],config.database['user'],config.database['password'],config.database['name'])
    
             db.autocommit(True)
+            db.set_character_set('utf8mb4')
             cur=db.cursor()
             
  
