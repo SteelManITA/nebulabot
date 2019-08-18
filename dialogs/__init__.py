@@ -1,3 +1,4 @@
-__all__ = ["handler", "definisci", "welcome", "battuta", "customhandler"]
+__all__ = ["handler", "definisci", "battuta", 
+"customhandler", "customhandler2"]
 
 from dialogs import *

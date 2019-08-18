@@ -1,14 +1,26 @@
-import wikipedia
-#ZAMPA DEFINISCI RISCRITTO
+import wikipedia as wiki
+from datetime import datetime
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from utils import util
+
+
 def init(bot, update):
-	if update.message.text is not None:
-		if str(update.message.text).lower().startswith("nebula definisci"):
-			var_messaggio = update.message.text
-			var_messaggio = update.message.text[17:]
-			print("{} searced a definition from Wikipedia".format(update.message.from_user.username))
-			wikipedia.set_lang("it")
-			try:
-				definition = wikipedia.summary(var_messaggio, sentences=3)
-				bot.send_message(update.message.chat_id, text=definition)
-			except:
-				bot.send_message(update.message.chat_id, text="Mi spiace {}, non ho trovato nulla riguardo '{}'".format(update.message.from_user.username, var_messaggio))
+    if update.message is not None and update.message.text is not None:
+        if str(update.message.text).lower().startswith("nebula definisci"):
+    # Recupero della definizione
+            arg = update.message.text[17:]
+            wiki.set_lang('it')
+            pg = wiki.page(wiki.search(arg)[0])
+            title = pg.title
+            pg_url = pg.url
+            definizione = pg.summary
+            button_list = [InlineKeyboardButton("Guarda su Wikipedia", url=pg_url)]
+            reply_markup = InlineKeyboardMarkup(util.build_menu(button_list, n_cols=1))
+            text = "*{}:*\n\n{}".format(title, definizione)
+            # Risposta del Bot
+            update.message.reply_markdown(text, reply_markup=reply_markup)
+            # LOG del bot
+            user = update.message.from_user
+            messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
+            print('User: {} con ID: {} '.format(user['username'], user['id'])
+                + "Ha appena eseguito il seguente comando: NEBULA DEFINISCI alle ore " + messagetime)

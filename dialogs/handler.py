@@ -4,10 +4,11 @@ import wikipedia
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from . import definisci
-from . import welcome
 from . import battuta
 from . import admincommand
 from . import customhandler
+from . import customhandler2
+from utils import util
 
 #RISPOSTE DI NEBULA
 
@@ -91,7 +92,6 @@ def comestai(bot, update):
 		
 #DICHIARAZIONE FUNZIONI
 def init(bot, update):
-	welcome.init(bot, update)
 	buongiorno(bot, update)
 	buonanotte(bot, update)
 	dammizampa(bot, update)
@@ -107,9 +107,11 @@ def init(bot, update):
 	presentazione2(bot, update)
 	battuta.init(bot, update)
 	kali(bot, update)
+	util.debug(update)
 	definisci.init(bot, update)
 	admincommand.init(bot, update)
 	customhandler.init(bot, update)
+	customhandler2.init(bot, update)
 	
 
 
