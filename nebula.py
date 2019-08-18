@@ -36,6 +36,10 @@ def main():
     dp.add_handler(CommandHandler("setbattuta", commands.insertbattuta.init))
     dp.add_handler(CommandHandler("setrisposta", commands.insertcustomhandler.init))
     dp.add_handler(CommandHandler("server", commands.server.init))
+    dp.add_handler(CommandHandler("comunicazione", commands.comunicazione.init))
+    dp.add_handler(CommandHandler("kicka", commands.kick.init))
+    dp.add_handler(CommandHandler("info", commands.get.init))
+    dp.add_handler(CommandHandler("community", commands.community.init))
     
     # Qui richiamo le funzioni senza comando, =>handler
     dp.add_handler(MessageHandler(None, dialogs.handler.init))
