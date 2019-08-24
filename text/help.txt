@@ -52,7 +52,7 @@
 <b>=============================</b>
 <code>Release info:
 
-v.6.0 - Falco
+v.6.5 - Falco
 Source code: /source
 
 Dev:</code> @Hersy
