@@ -12,7 +12,8 @@ def init(bot, update):
 			var_messaggio = update.message.text[7:]
 			bot.send_message(config.admingroup_id, 
                  text="<b>NUOVA RICHIESTA DI SUPPORTO</b>\nChat: {idchat}\nAutore: {username}\nLink: {linkurl}{idchat}/{link}\n<code>Messaggio:{}</code>"
-					 .format(var_messaggio, username="@"+update.message.from_user.username, 
+					 .format(var_messaggio, 
+					 username="@"+update.message.from_user.username, 
 					 link=update.message.message_id, 
 					 idchat=update.message.chat.title, 
 					 linkurl="https://t.me/"),
