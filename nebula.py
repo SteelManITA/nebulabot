@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import logging
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler
+from dialogs import admincommand
 import config, commands, dialogs, utils
 
 # Questo abilita i log
@@ -40,6 +41,8 @@ def main():
     dp.add_handler(CommandHandler("kicka", commands.kick.init))
     dp.add_handler(CommandHandler("info", commands.get.init))
     dp.add_handler(CommandHandler("community", commands.community.init))
+    dp.add_handler(CallbackQueryHandler(admincommand.risolto))
+
     
     # Qui richiamo le funzioni senza comando, =>handler
     dp.add_handler(MessageHandler(None, dialogs.handler.init))
