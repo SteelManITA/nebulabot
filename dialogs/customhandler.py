@@ -1,11 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import config
+import telegram
 import MySQLdb
- 
+from random import random
+from time import sleep 
+
 def init(bot, update):
-	if update.message.text is not None:
-		if str(update.message.text).lower().startswith("nebula"):
+	if update.message is not None and update.message.text is not None:
+		if str(update.message.text).lower().startswith("zampa"):
+			var_risposta = str(update.message.text).lower()
+			
+			bot.sendChatAction(chat_id=update.message.chat_id , 
+			action = telegram.ChatAction.TYPING)
+			
+			sleep(random() * 1 + 1.)
+			
 			db=MySQLdb.connect(
                 config.database['server'],
                 config.database['user'],
@@ -17,11 +27,11 @@ def init(bot, update):
 			cur=db.cursor()
   		
 			query = 'SELECT risposta_text FROM risposte WHERE domanda_text = %s'
-			cur.execute(query, [update.message.text])
+			cur.execute(query, [var_risposta])
 			row = cur.fetchone()
 			
 			while row is not None:
-				bot.send_message(update.message.chat_id, text=row[0], parse_mode='HTML')
+				update.message.reply_text(text=row[0], parse_mode='HTML')
 				row = cur.fetchone()
 				cur.close()
 				db.close()
