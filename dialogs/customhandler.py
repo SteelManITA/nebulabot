@@ -8,7 +8,7 @@ from time import sleep
 
 def init(bot, update):
 	if update.message is not None and update.message.text is not None:
-		if str(update.message.text).lower().startswith("zampa"):
+		if str(update.message.text).lower().startswith("nebula"):
 			var_risposta = str(update.message.text).lower()
 			
 			bot.sendChatAction(chat_id=update.message.chat_id , 
