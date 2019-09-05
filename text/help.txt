@@ -52,7 +52,7 @@
 <b>=============================</b>
 <code>Release info:
 
-v.6.5 - Falco
+v.8.0 - Hoatzin
 Source code: /source
 
 Dev:</code> @Hersy
