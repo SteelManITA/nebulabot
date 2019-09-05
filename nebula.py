@@ -14,7 +14,7 @@ def error(update, context):
 
 # Questa è la funzione che inizializza il bot
 def main():
-    updater = Updater(config.bot_token)
+    updater = Updater(config.bot_token, use_context=True)
     dp = updater.dispatcher
 
     # Qui "creo" i comandi e assegno una funzione
