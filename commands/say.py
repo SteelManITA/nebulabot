@@ -1,8 +1,8 @@
 from utils import decorator
 @decorator.restricted
 @decorator.cancellacomandi
-def init(bot, update):
-	pass
+def init(update, context):
+	bot = context.bot
 	if update.message.text is not None:
 		if str(update.message.text).lower().startswith("/say"):
 			var_messaggio = update.message.text

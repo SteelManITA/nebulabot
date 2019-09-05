@@ -1,6 +1,7 @@
 from utils import decorator
 @decorator.cancellacomandi
-def init(bot, update):
+def init(update, context):
+	bot = context.bot
 	if update.message.text is not None:
 		if update.message.text.startswith("/richiedi"):
 			var_messaggio = update.message.text

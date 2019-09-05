@@ -4,7 +4,8 @@ from utils import util
 from utils import decorator
 
 @decorator.cancellacomandi
-def init(bot, update):
+def init(update, context):
+    bot = context.bot
     button_list = [
     InlineKeyboardButton("HTML/CSS", url='https://t.me/html_css_ita'),
     InlineKeyboardButton("JAVASCRIPT", url='https://t.me/javascript_ita'),

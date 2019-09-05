@@ -1,7 +1,8 @@
 from utils import decorator
 import random
 @decorator.cancellacomandi
-def init(bot, update):
+def init(update, context):
+    bot = context.bot
     distro_dir = [
         'https://distrowatch.com/table.php?distribution=opensuse',
         'https://distrowatch.com/table.php?distribution=elementary',

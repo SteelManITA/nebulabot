@@ -4,7 +4,7 @@ from utils import decorator
  
 @decorator.restricted
 @decorator.cancellacomandi
-def init(bot, update):
+def init(update, context):
     if update.message.text is not None:
         if str(update.message.text).lower().startswith("/setbattuta"):
             var_messaggio = update.message.text
