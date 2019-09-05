@@ -4,7 +4,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from utils import util
 
 
-def init(bot, update):
+def init(update, context):
     if update.message is not None and update.message.text is not None:
         if str(update.message.text).lower().startswith("nebula definisci"):
     # Recupero della definizione

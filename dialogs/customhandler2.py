@@ -3,7 +3,8 @@
 import config
 import MySQLdb
 
-def init(bot, update):
+def init(update, context):
+	bot = context.bot
 	if update.message is not None and update.message.text is not None:
 		if str(update.message.text).lower().startswith("/"):
 			db=MySQLdb.connect(

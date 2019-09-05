@@ -1,6 +1,6 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 #BENVENUTO DI NEBULA
-def init(bot, update):
+def init(update, context):
 	for new in update.message.new_chat_members:
 		keyboard = [[InlineKeyboardButton("HTML/CSS/FRONTEND", url='http://t.me/html_css_ita'),
              InlineKeyboardButton("PHP_ITA",   url='http://t.me/php_italia'),

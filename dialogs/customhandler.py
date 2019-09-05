@@ -6,7 +6,8 @@ import MySQLdb
 from random import random
 from time import sleep 
 
-def init(bot, update):
+def init(update, context):
+	bot = context.bot
 	if update.message is not None and update.message.text is not None:
 		if str(update.message.text).lower().startswith("nebula"):
 			var_risposta = str(update.message.text).lower()

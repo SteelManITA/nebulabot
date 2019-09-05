@@ -2,7 +2,8 @@ import config
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
-def init(bot, update):
+def init(update, context):
+	bot = context.bot
 	if update.message.text is not None:
 		if update.message.text.startswith("@admin"):
 			keyboard = [[InlineKeyboardButton("Risolto✅", callback_data='1')]]
@@ -28,7 +29,7 @@ def init(bot, update):
 					 linkurl="https://t.me/"),
                  parse_mode='HTML')
 
-def risolto(bot, update):
+def risolto(update, context):
 	query = update.callback_query
 	var_messaggio = query.message.text
 	var_messaggio = query.message.text[6:]
@@ -36,4 +37,3 @@ def risolto(bot, update):
 	.format(var_messaggio,
 	username=str(update.effective_user.username)),
 	parse_mode='HTML')
-

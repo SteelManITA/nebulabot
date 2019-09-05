@@ -1,7 +1,8 @@
 import config
 import MySQLdb
  
-def init(bot, update):
+def init(update, context):
+	bot = context.bot
 	if update.message.text is not None:
 		if str(update.message.text).lower().startswith("nebula fai una battuta"):
 			db=MySQLdb.connect(config.database['server'],config.database['user'],config.database['password'],config.database['name'])
