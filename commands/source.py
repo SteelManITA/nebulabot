@@ -3,7 +3,7 @@ from utils import decorator
 def init(update, context):
     bot = context.bot
     bot.send_message(update.message.chat_id, text="<b>     NebulaBot</b>\n"
-                                          "====================\n\n"
+                                          "===================\n\n"
                                           "<b>Linguaggio:</b> <em>Python</em>\n\n"
                                           "<b>Versione</b>:<em> v.8.0 - Hoatzin</em>\n\n"
                                           "<b>Developer</b>:<em>Hersel Giannella</em>\n\n"
