@@ -44,6 +44,7 @@
 - /muta [muta un utente, solo admin]
 - /smuta [smuta un utente, solo admin]
 - /fissa [solo admin]
+- /setfissa [setta una parte fissa di default alla fine del messaggio fissato, solo admin]
 - /description [solo admin]
 - /title [solo admin]
 - /setbattuta [solo admin]

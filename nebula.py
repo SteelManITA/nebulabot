@@ -28,6 +28,7 @@ def main():
     dp.add_handler(CommandHandler("muta", commands.muta.init))
     dp.add_handler(CommandHandler("smuta", commands.smuta.init))
     dp.add_handler(CommandHandler("fissa", commands.fissa.init))
+    dp.add_handler(CommandHandler("setfissa", commands.setfissa.init))
     dp.add_handler(CommandHandler("say", commands.say.init))
     dp.add_handler(CommandHandler("annuncio", commands.annuncio.init))
     dp.add_handler(CommandHandler("richiedi", commands.richiedifunzione.init))
